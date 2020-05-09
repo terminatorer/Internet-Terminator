@@ -1,4 +1,4 @@
-package generate;
+package com.internet.terminator.entity;
 
 //import lombok.Data;
 

@@ -1,10 +1,8 @@
-package com.example.demo.controller;
+package com.internet.terminator.controller;
 
 
-import com.example.demo.entity.User;
-import com.example.demo.service.UserService;
+import com.internet.terminator.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

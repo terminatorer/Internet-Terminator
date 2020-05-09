@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="generate.UserDao">
-  <resultMap id="BaseResultMap" type="generate.User">
+<mapper namespace="com.internet.terminator.dao.UserDao">
+  <resultMap id="BaseResultMap" type="com.internet.terminator.entity.User">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="userName" jdbcType="VARCHAR" property="username" />
     <result column="passWord" jdbcType="VARCHAR" property="password" />
@@ -20,13 +20,13 @@
     delete from user
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="generate.User" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.internet.terminator.entity.User" useGeneratedKeys="true">
     insert into user (userName, `passWord`, realName
       )
     values (#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{realname,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="generate.User" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.internet.terminator.entity.User" useGeneratedKeys="true">
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="username != null">
@@ -51,7 +51,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="generate.User">
+  <update id="updateByPrimaryKeySelective" parameterType="com.internet.terminator.entity.User">
     update user
     <set>
       <if test="username != null">
@@ -66,7 +66,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="generate.User">
+  <update id="updateByPrimaryKey" parameterType="com.internet.terminator.entity.User">
     update user
     set userName = #{username,jdbcType=VARCHAR},
       `passWord` = #{password,jdbcType=VARCHAR},

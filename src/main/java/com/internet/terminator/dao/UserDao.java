@@ -1,6 +1,6 @@
-package generate;
+package com.internet.terminator.dao;
 
-import generate.User;
+import com.internet.terminator.entity.User;
 
 public interface UserDao {
     int deleteByPrimaryKey(Integer id);
