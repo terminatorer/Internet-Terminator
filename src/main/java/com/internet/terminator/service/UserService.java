@@ -1,8 +1,8 @@
-package com.example.demo.service;
+package com.internet.terminator.service;
 
 
-import com.example.demo.entity.User;
-import com.example.demo.mapper.UserMapper;
+import com.internet.terminator.entity.User;
+import com.internet.terminator.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
